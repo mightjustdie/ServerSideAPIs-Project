@@ -7,7 +7,14 @@ var forecast = $("#weatherForecast");
 // City Array //
 var citiesArray;
 
-
+$(document).ready(function() {
+    $("#cityForm").submit(function(event) {
+      event.preventDefault();
+    var cityName = $("#cityInput").val();
+    returnLatLon(cityName);
+  });
+});
+  
 
 // Call API for current weather by lat and lon
 function returnCurrentWeather(lat, lon) {
@@ -33,5 +40,3 @@ function returnLatLon(cityName = 'atlanta') {
         returnCurrentWeather(lat, lon);
     })
 }
-
-returnLatLon();
