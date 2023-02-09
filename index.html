@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Develop/style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="Develop/script.js"></script>
+    <title>Weather Dashboard</title>
+</head>
+
+<body>  
+    <header>
+        <div id="header">
+            <div id= "weather-dashboard">Weather Dashboard</div>
+        </div>
+    </header>
+    <div>
+        <div>
+            <div class="searchColumn">
+                <form>
+                    <h4>Search for a City:</h4>
+                    <div class="input-group">
+                        <input type="text" id="cityInput" placeholder="Enter City">
+                        <div>
+                        <!-- Search Button -->
+                        <button type="submit" id="submitCity" class="searchBtn">Search</button>
+                    </div>
+                </div>
+            </form> 
+    <!-- Previous Search -->
+        <div id="previousSearch" class="prevBttns">
+         </div>
+         </div>
+    <!-- Current Weather info -->
+            <div class="container" id="currentWeather">
+                <h2>Current Weather Here</h2>
+            </div>
+    <!-- 5 Day Forecast Display -->
+        <h3>5-Day Forecast:</h3>
+        <div id="weatherForecast">
+</div>
+
+</body>
+
+</html>

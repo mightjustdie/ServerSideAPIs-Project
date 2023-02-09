@@ -1,0 +1,77 @@
+*, *::before, *::after {
+font-family: sans-serif;
+}
+
+header {
+    text-align: center;
+    border: 2px black solid;
+    padding: 25px;
+    font-size: 40px;
+    font-weight: bolder;
+    background-color: darkblue;
+    color: white;
+}
+
+.searchColumn {
+    background-color: #eee;
+}
+
+h4 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 1300px;
+}
+
+input {
+    margin-left: 10px;
+    padding: 10px;
+    padding-right: 55px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.searchBtn {
+    margin: 10px;
+    font-size: 25px;
+    padding: 5px;
+    padding-right: 150px;
+    background-color: dodgerblue;
+    color: white;
+    border: 1px black solid;
+}
+.prevBttns {
+    width: 100%;
+    display: inline-block;
+}
+
+.btn-light {
+    text-align: left;
+}
+
+#currentWeather {
+    border: solid 1px rgba(0,0,0,.125);
+    border-radius: 0.3rem;
+    padding: 15px;
+}
+
+#previousSearch {
+    border: solid 1px rgba(0,0,0,.125);
+    margin-bottom: 15px;
+    max-height: 408px;
+    overflow: auto;
+}
+
+@media (max-width:768px) {
+    #previousSearch {
+        max-height: 152px;
+    }
+}
