@@ -11,32 +11,20 @@ $(document).ready(function() {
     $("#searchForm").submit(function(event) {
       event.preventDefault();
     var cityName = $("#cityInput").val();
-    returnLatLon(cityName);
+    returnForecast(cityName);
   });
 });
   
 
-// Call API for current weather by lat and lon
-function returnCurrentWeather(lat, lon) {
-    let queryURL = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
-    fetch(queryURL)
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(data){
-        console.log(data)
-    })
-}
 // Call API for lat and lon by city name
-function returnLatLon(cityName) {
+function returnForecast(cityName) {
     let queryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}&units=imperial`
+    
     fetch (queryURL)
     .then(function(response){
         return response.json();
     })
     .then(function(data){
-        let lat = data.city.coord.lat;
-        let lon = data.city.coord.lon;
-        returnCurrentWeather(lat, lon);
+    console.log(data);
     })
 }
