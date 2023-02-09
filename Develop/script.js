@@ -28,7 +28,7 @@ function returnCurrentWeather(lat, lon) {
     })
 }
 // Call API for lat and lon by city name
-function returnLatLon(cityName = 'atlanta') {
+function returnLatLon(cityName) {
     let queryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}`
     fetch (queryURL)
     .then(function(response){
